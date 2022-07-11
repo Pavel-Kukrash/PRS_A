@@ -1,0 +1,65 @@
+<app-menu></app-menu>
+<style>
+    input { margin-left: 10px;}
+</style>
+
+<h3>Edit Vendor "{{vendor.name}}"</h3>
+
+<span style="color:red">{{errorMessage}}</span>
+
+<form [formGroup]="vendorForm"
+        (submit)="onSubmit()">
+    
+    <table>
+
+        <tr>
+            <td>Code:</td>
+                <td><input formControlName="code" name="code" id="code" type="text"></td>
+            </tr>
+        <br>
+        <tr>
+            <td> Name:</td>
+                <td><input formControlName="name" name="name" id="name" type="text"></td>
+            </tr>   
+         <br>
+        <tr>
+            <td> Address: </td>
+                <td><input formControlName="address" name="address" id="address" type="text"></td>
+        </tr>
+        <br>    
+        <tr>
+            <td>City: </td>
+                <td><input formControlName="city" name="city" id="city" type="text"></td>
+         </tr>
+        <br>
+        <tr>
+            <td>State:</td>
+                <td><input formControlName="state" name="state" id="state" type="text"> </td>
+            </tr>
+        <br>
+        <tr>
+            <td>Zip:</td>
+                <td><input formControlName="zip" name="zip" id="zip" type="text"> </td>
+            </tr>
+        <br>
+        <tr>
+            <td>Phone: </td>
+                <td><input formControlName="phone" name="phone" id="phone" type="text"></td>
+        </tr>
+        <br>
+        <tr>
+            <td>Email: </td>
+                <td><input formControlName="email" name="email" id="email" type="email"></td>
+        </tr>
+        <br>
+
+    <tr>
+        <td><button>Submit</button></td>
+    <td><button routerLink="/vendor-list" >Cancel</button></td>
+    </tr>
+</table>
+
+</form>
+
+
+

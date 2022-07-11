@@ -1,0 +1,46 @@
+
+<app-menu></app-menu>
+
+<form [formGroup]="productForm"
+        class="input-group vertical" 
+        (submit)="onSubmit()">
+<table>
+    <tr>
+        <td>PartNbr:</td>
+            <td><input formControlName="partNbr" name="partNbr" id="partNbr" type="text"></td>
+        </tr>
+    <br>
+    <tr>
+        <td>Name: </td>
+            <td><input formControlName="name" name="name" id="name" type="text"></td>
+    </tr>   
+     <br>
+    <tr>
+        <td>Price:</td>
+            <td><input formControlName="price" name="price" id="price" type="text"></td>
+        </tr>
+    <br>    
+    <tr>
+        <td>Unit:</td>
+            <td><input formControlName="unit" name="unit" id="unit" type="text"> </td>
+        </tr>
+    <br>
+    <tr>
+        <td>Photopath: </td>
+            <td><input formControlName="photoPath" name="photoPath" id="photoPath" type="text"> </td>
+    </tr>
+    <br>
+    <tr>
+        <td>VendorID:</td>          
+        <td><select formControlName="vendorId" >
+            <option *ngFor="let vendor of vendors" value="{{vendor.id}}"> {{vendor.name}} </option>
+        </select></td>
+    </tr>
+    <br>
+    
+    
+    <tr><button>Submit</button></tr>
+</table>
+</form>
+
+

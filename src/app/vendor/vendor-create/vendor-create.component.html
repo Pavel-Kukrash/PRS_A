@@ -1,0 +1,52 @@
+
+<app-menu></app-menu>
+
+<form [formGroup]="vendorForm"
+        class="input-group vertical" 
+        (submit)="onSubmit()">
+<table>
+    <tr>
+        <td>Code:</td>
+            <td><input formControlName="code" name="code" id="code" type="text"></td>
+        </tr>
+    <br>
+    <tr>
+        <td> Name:</td>
+            <td><input formControlName="name" name="name" id="name" type="text"></td>
+        </tr>   
+     <br>
+    <tr>
+        <td> Address: </td>
+            <td><input formControlName="address" name="address" id="address" type="text"></td>
+    </tr>
+    <br>    
+    <tr>
+        <td>City: </td>
+            <td><input formControlName="city" name="city" id="city" type="text"></td>
+     </tr>
+    <br>
+    <tr>
+        <td>State:</td>
+            <td><input formControlName="state" name="state" id="state" type="text"> </td>
+        </tr>
+    <br>
+    <tr>
+        <td>Zip:</td>
+            <td><input formControlName="zip" name="zip" id="zip" type="text"> </td>
+        </tr>
+    <br>
+    <tr>
+        <td>Phone: </td>
+            <td><input formControlName="phone" name="phone" id="phone" type="text"></td>
+    </tr>
+    <br>
+    <tr>
+        <td>Email: </td>
+            <td><input formControlName="email" name="email" id="email" type="email"></td>
+    </tr>
+    <br>
+    
+    <tr><button>Submit</button></tr>
+</table>
+</form>
+

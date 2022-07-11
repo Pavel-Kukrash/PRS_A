@@ -1,0 +1,17 @@
+img {
+    height: 60px;
+    width: 60px;
+  }
+  button {
+    background-color: white;
+    color: black;
+    border: 2px solid red;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    font-weight: bold;}
+
+   

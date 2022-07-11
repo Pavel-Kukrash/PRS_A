@@ -1,0 +1,12 @@
+td:first-child {font-weight: bold;}
+td:nth-child(2) {background-color: white;}
+table, tr, td {
+    border: 1px solid;
+    padding: 2px;
+    text-align: left;
+  }
+  td {
+    height: 20px;
+    vertical-align: center;
+  }
+  h2 {color: rgb(206, 7, 7);}

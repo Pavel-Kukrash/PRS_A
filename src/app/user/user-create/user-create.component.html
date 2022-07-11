@@ -1,0 +1,52 @@
+
+<app-menu></app-menu>
+
+<form [formGroup]="userForm"
+        class="input-group vertical" 
+        (submit)="onSubmit()">
+<table>
+    <tr>
+        <td>Username:</td>
+        <td><input formControlName="username" name="username" id="username" type="text"></td>
+        </tr>
+    <br>
+    <tr>
+        <td>Password: </td>
+        <td><input formControlName="password" name="password" id="password" type="text"></td>
+    </tr>   
+     <br>
+    <tr>
+        <td>First Name:</td>
+        <td><input formControlName="firstname" name="firstname" id="firstname" type="text"></td>
+    </tr>
+    <br>    
+    <tr>
+        <td>Last Name:</td>
+        <td><input formControlName="lastname" name="lastname" id="lastname" type="text"></td>
+    </tr>
+    <br>
+    <tr>
+        <td>Phone:</td>
+        <td><input formControlName="phone" name="phone" id="phone" type="text"></td>
+    </tr>
+    <br>
+    <tr>
+        <td>Email: </td>
+        <td><input formControlName="email" name="email" id="email" type="email"></td>
+    </tr>
+    <br>
+    <tr>
+        <td>isReviewer: </td>
+        <td><input formControlName="isReviewer" name="isReviewer" id="isReviewer" type="checkbox"></td>
+    </tr>
+    <br>
+    <tr>
+        <td>isAdmin:</td>
+        <td><input formControlName="isAdmin" name="isAdmin" id="isAdmin" type="checkbox"></td>
+    </tr>
+    <br>
+
+    <tr><button>Submit</button></tr>
+</table>
+</form>
+

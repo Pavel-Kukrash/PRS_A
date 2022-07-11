@@ -1,0 +1,70 @@
+<app-menu></app-menu>
+
+    <style>
+        td {border:1px black solid; background-color: white;}
+    </style>
+    <h3>Request {{requestid}}</h3>
+
+    <hr>
+
+    <div *ngIf="reviewmode == 'review'">
+
+        <button style="color:blue;font-weight: bold;">APPROVE</button>
+        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+        <button style="color:red;font-weight: bold">REJECT</button> with reason: <input type="text"/>
+        <br><br>
+    </div>
+    
+    <table>
+        <tr>
+            <th>Req ID</th>
+            <th>User</th>
+            <th>Description</th>
+            <th>Justification</th>
+            <th>Rejection Reason</th>
+            <th>Delivery Mode</th>
+            <th>Status</th>
+            <th>Total</th>
+            <th>UserId</th>
+
+        </tr>
+        <tr >
+            <td>{{request.id}}</td>
+            <td>{{request.user.firstname + " " +request.user.lastname }} </td>
+            <td>{{request.description}}</td>
+            <td>{{request.justification}}</td>
+            <td>{{request.rejectionReason}}</td>
+            <td>{{request.deliveryMode}}</td>
+            <td>{{request.status}}</td>
+            <td style="text-align: right;">{{request.total | currency}}</td>
+            <td>{{request.userId}}</td>
+        </tr>
+    </table>
+
+    <h3>Request Lines</h3>
+    
+    <table>
+        <tr>
+            <th>RL ID</th>
+            <th>Request ID</th>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+        <tr  *ngFor="let rl of (requestlines)">
+            <td>{{rl.id}}</td>
+            <td>{{rl.requestId}}</td>
+            <td>{{rl.productId}}</td>
+            <td>
+                {{getaproductname(rl.productId)}}
+            </td>
+            <td>{{rl.quantity}}</td>
+            <td>
+                {{getaproductprice(rl.productId) | currency}}
+            </td>
+            <td>
+                {{getaproductprice(rl.productId) * rl.quantity | currency}}
+            </td>    </tr>
+    </table>

@@ -1,0 +1,35 @@
+
+<h1>
+    <div><img src="assets/pict3.jpg"></div>
+     PRS System     
+</h1>
+
+<nav>
+    
+  <ul class="horizontalmenu">
+    
+        <li *ngFor='let mi of menuitems'>
+            <span *ngIf="mi.visible" >
+            <a routerLink="{{mi.route}}" >{{mi.display}}</a>
+            </span> 
+        </li>
+        
+    </ul>
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+<i class="material-icons">cloud</i>
+<i class="material-icons">attachment</i>
+<i class="material-icons">computer</i>
+<i class="material-icons">traffic</i>
+
+</body>
+</html>
+    
+</nav>
+

@@ -1,0 +1,32 @@
+
+<h1>
+   <img src="assets/pict3.jpg">
+    </h1>
+
+<h2>User Login</h2>
+
+<span style="color: red">{{errormsg}}</span>
+
+<form [formGroup]="userLoginForm">
+    <table>
+        <tr>
+            <td>
+                User Name: 
+            </td>
+            <td>
+                <input type="text" name="username" formControlName="username" value="paul"/>
+            </td>            
+        </tr>
+        <tr>
+            <td>
+                Password: 
+            </td>
+            <td>
+                <input type="password" name="password" formControlName="password" value="pass"/>
+            </td>            
+        </tr>
+    </table>
+    <button (click)="login()" >Login</button>
+</form>
+
+
